@@ -3,9 +3,9 @@
 namespace Omalizadeh\JalaliCalendar;
 
 use Illuminate\Contracts\Support\Arrayable;
-use Morilog\Jalali\CalendarUtils;
+use Illuminate\Contracts\Support\Responsable;
 
-class JalaliDate implements Arrayable
+class JalaliDate implements Arrayable, Responsable
 {
     protected string $unixTimestamp;
     protected bool $isHoliday;
@@ -18,7 +18,7 @@ class JalaliDate implements Arrayable
         $this->events = $events;
     }
 
-    public function getDate(string $format = 'Y-m-d'): string
+    public function date(string $format = 'Y-m-d'): string
     {
         return jdate($this->unixTimestamp)->format($format);
     }
@@ -39,5 +39,12 @@ class JalaliDate implements Arrayable
             'is_holiday' => $this->isHoliday,
             'events' => $this->events,
         ];
+    }
+
+    public function toResponse($request)
+    {
+        return response()->json([
+            'data' => $this->toArray()
+        ]);
     }
 }

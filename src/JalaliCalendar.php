@@ -2,11 +2,9 @@
 
 namespace Omalizadeh\JalaliCalendar;
 
-use Illuminate\Support\Facades\Facade;
-
-class JalaliCalendar extends Facade
+class JalaliCalendar
 {
-    public static function getEvents(string $date): JalaliDate
+    public static function check(string $date): JalaliDate
     {
         return (new JalaliDateEventsCrawler($date))->getEvents();
     }
