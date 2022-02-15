@@ -1,0 +1,56 @@
+{
+    "name": "omalizadeh/laravel-jalali-calendar",
+    "description": "A laravel package to get jalali events from time.ir",
+    "homepage": "https://github.com/omalizadeh/laravel-jalali-calendar",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "php",
+        "jalali",
+        "shamsi",
+        "calendar",
+        "event",
+        "holiday",
+        "persian",
+        "farsi"
+    ],
+    "authors": [
+        {
+            "name": "Omid Alizadeh",
+            "email": "om.alizadeh1@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "guzzlehttp/guzzle": "^6.5.5|^7.0.1",
+        "illuminate/contracts": "^7.0|^8.0|^9.0",
+        "illuminate/http": "^7.0|^8.0|^9.0",
+        "illuminate/support": "^7.0|^8.0|^9.0",
+        "morilog/jalali": "^3.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.24|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omalizadeh\\JalaliCalendar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omalizadeh\\JalaliCalendar\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit --color=always"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
