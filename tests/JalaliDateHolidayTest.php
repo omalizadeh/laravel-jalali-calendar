@@ -13,7 +13,7 @@ class JalaliDateHolidayTest extends TestCase
         $jalaliDate = JalaliCalendar::check($date);
 
         $this->assertTrue($jalaliDate->isHoliday());
-        $this->assertEquals('1400-11-15', $jalaliDate->date());
+        $this->assertEquals('1400/11/15', $jalaliDate->date());
     }
 
     public function testRandomWorkingMondayIsNotDeterminedAsHoliday(): void
@@ -23,6 +23,6 @@ class JalaliDateHolidayTest extends TestCase
         $jalaliDate = JalaliCalendar::check($date);
 
         $this->assertFalse($jalaliDate->isHoliday());
-        $this->assertEquals('1400/11/18', $jalaliDate->date('Y/m/d'));
+        $this->assertEquals('1400-11-18', $jalaliDate->date('Y-m-d'));
     }
 }

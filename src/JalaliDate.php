@@ -18,7 +18,7 @@ class JalaliDate implements Arrayable, Responsable
         $this->events = $events;
     }
 
-    public function date(string $format = 'Y-m-d'): string
+    public function date(string $format = 'Y/m/d'): string
     {
         return jdate($this->unixTimestamp)->format($format);
     }
