@@ -7,12 +7,12 @@ use Illuminate\Support\Collection;
 
 class JalaliCalendar
 {
-    public static function check(string $date): JalaliDate
+    public static function fromGregorian(string $date): JalaliDate
     {
         return (new JalaliDateEventsCrawler($date))->getEvents();
     }
 
-    public static function checkPeriod(string $fromDate, string $toDate): Collection
+    public static function fromGregorianPeriod(string $fromDate, string $toDate): Collection
     {
         $datePeriod = CarbonPeriod::create($fromDate, $toDate);
 

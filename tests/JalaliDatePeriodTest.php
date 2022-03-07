@@ -11,12 +11,12 @@ class JalaliDatePeriodTest extends TestCase
         $fromDate = '2022-03-03';
         $toDate = '2022-03-04';
 
-        [$firstJalaliDate, $secondJalaliDate] = JalaliCalendar::checkPeriod($fromDate, $toDate);
+        [$firstJalaliDate, $secondJalaliDate] = JalaliCalendar::fromGregorianPeriod($fromDate, $toDate);
 
         $this->assertFalse($firstJalaliDate->isHoliday());
-        $this->assertEquals('1400/12/12', $firstJalaliDate->date());
+        $this->assertEquals('1400/12/12', $firstJalaliDate->format());
 
         $this->assertTrue($secondJalaliDate->isHoliday());
-        $this->assertEquals('1400/12/13', $secondJalaliDate->date());
+        $this->assertEquals('1400/12/13', $secondJalaliDate->format());
     }
 }

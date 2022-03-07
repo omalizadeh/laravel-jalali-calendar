@@ -10,19 +10,19 @@ class JalaliDateHolidayTest extends TestCase
     {
         $date = '2022-02-04';
 
-        $jalaliDate = JalaliCalendar::check($date);
+        $jalaliDate = JalaliCalendar::fromGregorian($date);
 
         $this->assertTrue($jalaliDate->isHoliday());
-        $this->assertEquals('1400/11/15', $jalaliDate->date());
+        $this->assertEquals('1400/11/15', $jalaliDate->format());
     }
 
     public function testRandomWorkingMondayIsNotDeterminedAsHoliday(): void
     {
         $date = '2022-02-07';
 
-        $jalaliDate = JalaliCalendar::check($date);
+        $jalaliDate = JalaliCalendar::fromGregorian($date);
 
         $this->assertFalse($jalaliDate->isHoliday());
-        $this->assertEquals('1400-11-18', $jalaliDate->date('Y-m-d'));
+        $this->assertEquals('1400-11-18', $jalaliDate->format('Y-m-d'));
     }
 }

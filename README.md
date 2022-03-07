@@ -17,14 +17,14 @@ Get a `JalaliDate` object by calling `check` static method on `JalaliCalendar` c
 ```php
     use Omalizadeh\JalaliCalendar\JalaliCalendar;
 
-    $jalaliDate = JalaliCalendar::check('2020-05-24');
+    $jalaliDate = JalaliCalendar::fromGregorian('2020-05-24');
 ```
 
 Then you can get different info from `JalaliDate` object. supported methods:
 
 | Methods   | Return type   | Description      |
 | --------- | ------------- | ---------------------|
-| date() | string        | Jalali date with given format|
+| format() | string        | Jalali date with given format|
 | isHoliday() | bool        | Check jalali date is holiday|
 | events() | array        | Get date's events|
 

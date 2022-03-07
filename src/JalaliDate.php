@@ -3,9 +3,8 @@
 namespace Omalizadeh\JalaliCalendar;
 
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Responsable;
 
-class JalaliDate implements Arrayable, Responsable
+class JalaliDate implements Arrayable
 {
     protected string $unixTimestamp;
     protected bool $isHoliday;
@@ -18,7 +17,7 @@ class JalaliDate implements Arrayable, Responsable
         $this->events = $events;
     }
 
-    public function date(string $format = 'Y/m/d'): string
+    public function format(string $format = 'Y/m/d'): string
     {
         return jdate($this->unixTimestamp)->format($format);
     }
@@ -39,12 +38,5 @@ class JalaliDate implements Arrayable, Responsable
             'is_holiday' => $this->isHoliday,
             'events' => $this->events,
         ];
-    }
-
-    public function toResponse($request)
-    {
-        return response()->json([
-            'data' => $this->toArray()
-        ]);
     }
 }
