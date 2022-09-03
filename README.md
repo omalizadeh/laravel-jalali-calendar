@@ -7,6 +7,8 @@
 
 This is a laravel package to get jalali date events and holidays by parsing time.ir website.
 
+> ⭐ Star! if you used & liked this package.
+
 ## Installation
 
 Install package with composer:
