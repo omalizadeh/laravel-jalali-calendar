@@ -12,12 +12,20 @@ composer require omalizadeh/laravel-jalali-calendar
 
 ## Usage
 
-Get a `JalaliDate` object by calling `check` static method on `JalaliCalendar` class. example:
+Get a `JalaliDate` object by calling `fromGregorian` static method on `JalaliCalendar` class. example:
 
 ```php
     use Omalizadeh\JalaliCalendar\JalaliCalendar;
 
     $jalaliDate = JalaliCalendar::fromGregorian('2020-05-24');
+```
+
+Or you can get a collection of `JalaliDate` objects by giving a gregorian period.
+
+```php
+    use Omalizadeh\JalaliCalendar\JalaliCalendar;
+
+    $jalaliDates = JalaliCalendar::fromGregorianPeriod('2020-05-24', '2020-05-28');
 ```
 
 Then you can get different info from `JalaliDate` object. supported methods:
