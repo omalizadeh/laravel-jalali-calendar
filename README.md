@@ -1,3 +1,8 @@
+[![License](http://poser.pugx.org/omalizadeh/laravel-jalali-calendar/license)](https://packagist.org/packages/omalizadeh/laravel-jalali-calendar)
+[![Tests](https://github.com/omalizadeh/laravel-jalali-calendar/actions/workflows/tests.yml/badge.svg)](https://github.com/omalizadeh/laravel-jalali-calendar/actions/workflows/tests.yml)
+[![Latest Stable Version](http://poser.pugx.org/omalizadeh/laravel-jalali-calendar/v)](https://packagist.org/packages/omalizadeh/laravel-jalali-calendar)
+[![Total Downloads](http://poser.pugx.org/omalizadeh/laravel-jalali-calendar/downloads)](https://packagist.org/packages/omalizadeh/laravel-jalali-calendar)
+
 # Laravel Jalali Calendar
 
 This is a laravel package to get jalali date events and holidays by parsing time.ir website.
